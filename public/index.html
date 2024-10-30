@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>eCommerce TP4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Productos</h1>
+    </header>
+
+    <section id="controles">
+        <div>
+            <label for="searchInput">Buscador:</label>
+            <input type="text" id="searchInput" placeholder="Buscar por descripción...">
+        </div>
+        <div>
+            <label for="categorySelect">Rubros:</label>
+            <select id="categorySelect">
+                <option value="">Todos los rubros</option>
+            </select>
+        </div>
+        <button id="toggleView">Cambiar vista</button>
+    </section>
+
+    <section id="ContenedorProductos" class="list-view">
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

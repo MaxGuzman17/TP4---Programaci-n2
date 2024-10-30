@@ -1,0 +1,43 @@
+--Base de datos
+CREATE DATABASE ecommerce
+
+--Tabla Rubros
+CREATE TABLE Rubros (
+    Codigo INT PRIMARY KEY AUTO_INCREMENT,
+    Descripcion VARCHAR(80) NOT NULL
+);
+
+--Tabla Productos
+CREATE TABLE Productos (
+    Codigo INT PRIMARY KEY AUTO_INCREMENT,
+    Descripcion VARCHAR(80) NOT NULL,
+    Rubro INT,
+    Precio DECIMAL(15, 2),
+    URLImagen VARCHAR(120),
+    FOREIGN KEY (Rubro) REFERENCES
+
+--Ejemplos RUBROS
+INSERT INTO Rubros (Descripcion) 
+VALUES 
+('Frutas y Verduras'),
+('Carnes y Embutidos'),
+('Lácteos y Huevos'),
+('Panadería y Pastelería'),
+('Bebidas'),
+('Snacks y Golosinas');
+
+--Ejemplos Productos
+INSERT INTO Productos (Codigo, Descripcion, Rubro, Precio, URLImagen) VALUES
+(1, 'Manzanas Rojas', 1, 3360.00, 'https://cdn.pixabay.com/photo/2014/02/01/17/28/apple-256261_960_720.jpg'),
+(2, 'Naranjas Valencia', 1, 2688.00, 'https://cdn.pixabay.com/photo/2016/02/22/20/38/oranges-1218159_960_720.jpg'),
+(3, 'Filete de Pollo', 2, 6912.00, 'https://cdn.pixabay.com/photo/2017/07/16/12/28/chicken-2511334_960_720.jpg'),
+(4, 'Chuletas de Cerdo', 2, 10080.00, 'https://cdn.pixabay.com/photo/2020/03/23/16/45/meat-4954395_960_720.jpg'),
+(5, 'Leche Entera 1L', 3, 1152.00, 'https://cdn.pixabay.com/photo/2016/12/06/18/27/milk-1887239_960_720.jpg'),
+(6, 'Pan Integral', 4, 4320.00, 'https://cdn.pixabay.com/photo/2017/06/02/18/24/bread-2367951_960_720.jpg'),
+(7, 'Queso Parmesano', 3, 1920.00, 'https://cdn.pixabay.com/photo/2015/12/10/00/06/cheese-1081670_960_720.jpg'),
+(8, 'Pastel de Chocolate', 4, 4800.00, 'https://cdn.pixabay.com/photo/2016/11/29/09/08/cake-1869227_960_720.jpg'),
+(9, 'Jugo de Naranja Natural', 5, 2880.00, 'https://cdn.pixabay.com/photo/2016/08/23/15/03/orange-juice-1614822_960_720.jpg'),
+(10, 'Papas Fritas Clásicas', 6, 1728.00, 'https://cdn.pixabay.com/photo/2020/06/23/14/35/french-fries-5330323_960_720.jpg');
+
+
+
